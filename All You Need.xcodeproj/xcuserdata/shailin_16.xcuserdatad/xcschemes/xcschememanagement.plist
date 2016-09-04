@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>All You Need Watch (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>All You Need Watch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>All You Need.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>9552F4A71D7C60C30004281D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9552F4BB1D7C61170004281D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
