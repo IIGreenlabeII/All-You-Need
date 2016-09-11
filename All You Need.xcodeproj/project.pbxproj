@@ -24,6 +24,8 @@
 		9552F4D61D7C61170004281D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9552F4D51D7C61170004281D /* Assets.xcassets */; };
 		9552F4DA1D7C61170004281D /* All You Need Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9552F4BC1D7C61170004281D /* All You Need Watch.app */; };
 		9552F4E41D7C61D20004281D /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552F4E31D7C61D20004281D /* ThirdViewController.swift */; };
+		9594C83E1D8591AC00FE5ABD /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594C83D1D8591AC00FE5ABD /* CustomCell.swift */; };
+		95DC0C3E1D85A7B900E38497 /* VoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC0C3D1D85A7B900E38497 /* VoteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		9552F4D51D7C61170004281D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9552F4D71D7C61170004281D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9552F4E31D7C61D20004281D /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		9594C83D1D8591AC00FE5ABD /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		95DC0C3D1D85A7B900E38497 /* VoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +176,9 @@
 			children = (
 				9552F48A1D7C60C30004281D /* AppDelegate.swift */,
 				9552F48C1D7C60C30004281D /* FirstViewController.swift */,
+				95DC0C3D1D85A7B900E38497 /* VoteCell.swift */,
 				9552F48E1D7C60C30004281D /* SecondViewController.swift */,
+				9594C83D1D8591AC00FE5ABD /* CustomCell.swift */,
 				9552F4E31D7C61D20004281D /* ThirdViewController.swift */,
 				9552F4901D7C60C30004281D /* Main.storyboard */,
 				9552F4931D7C60C30004281D /* Assets.xcassets */,
@@ -430,6 +436,8 @@
 			files = (
 				9552F48F1D7C60C30004281D /* SecondViewController.swift in Sources */,
 				9552F48B1D7C60C30004281D /* AppDelegate.swift in Sources */,
+				9594C83E1D8591AC00FE5ABD /* CustomCell.swift in Sources */,
+				95DC0C3E1D85A7B900E38497 /* VoteCell.swift in Sources */,
 				9552F4E41D7C61D20004281D /* ThirdViewController.swift in Sources */,
 				9552F48D1D7C60C30004281D /* FirstViewController.swift in Sources */,
 			);
@@ -744,6 +752,7 @@
 				9552F4B31D7C60C30004281D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9552F4B41D7C60C30004281D /* Build configuration list for PBXNativeTarget "All You NeedTests" */ = {
 			isa = XCConfigurationList;
@@ -752,6 +761,7 @@
 				9552F4B61D7C60C30004281D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9552F4B71D7C60C30004281D /* Build configuration list for PBXNativeTarget "All You NeedUITests" */ = {
 			isa = XCConfigurationList;
@@ -760,6 +770,7 @@
 				9552F4B91D7C60C30004281D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9552F4DB1D7C61170004281D /* Build configuration list for PBXNativeTarget "All You Need Watch Extension" */ = {
 			isa = XCConfigurationList;
@@ -768,6 +779,7 @@
 				9552F4DD1D7C61170004281D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9552F4DF1D7C61170004281D /* Build configuration list for PBXNativeTarget "All You Need Watch" */ = {
 			isa = XCConfigurationList;
@@ -776,6 +788,7 @@
 				9552F4E11D7C61170004281D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
