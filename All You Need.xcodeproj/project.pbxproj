@@ -342,24 +342,29 @@
 					9552F4861D7C60C30004281D = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = N98F93EMH7;
+						LastSwiftMigration = 0800;
 					};
 					9552F49C1D7C60C30004281D = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = N98F93EMH7;
+						LastSwiftMigration = 0800;
 						TestTargetID = 9552F4861D7C60C30004281D;
 					};
 					9552F4A71D7C60C30004281D = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = N98F93EMH7;
+						LastSwiftMigration = 0800;
 						TestTargetID = 9552F4861D7C60C30004281D;
 					};
 					9552F4BB1D7C61170004281D = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = N98F93EMH7;
+						LastSwiftMigration = 0800;
 					};
 					9552F4C71D7C61170004281D = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = N98F93EMH7;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -613,6 +618,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.shailinbiharie.All-You-Need";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -624,6 +630,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.shailinbiharie.All-You-Need";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -635,6 +642,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.shailinbiharie.All-You-NeedTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/All You Need.app/All You Need";
 			};
 			name = Debug;
@@ -647,6 +655,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.shailinbiharie.All-You-NeedTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/All You Need.app/All You Need";
 			};
 			name = Release;
@@ -658,6 +667,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.shailinbiharie.All-You-NeedUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "All You Need";
 			};
 			name = Debug;
@@ -669,6 +679,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.shailinbiharie.All-You-NeedUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "All You Need";
 			};
 			name = Release;
@@ -682,6 +693,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -696,6 +708,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -712,6 +725,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -728,6 +742,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};

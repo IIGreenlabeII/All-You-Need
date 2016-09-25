@@ -25,19 +25,19 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     // Het weergeven van het aantal tableviewcells
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
     // Het inladen van de gegevens voor de tableviewcells
-    func tableView(tabelView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let voteCell = self.tableView.dequeueReusableCellWithIdentifier("voteCell", forIndexPath: indexPath) as! VoteCell
+    func tableView(_ tabelView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let voteCell = self.tableView.dequeueReusableCell(withIdentifier: "voteCell", for: indexPath) as! VoteCell
         
         // Hightlight op none
-        voteCell.selectionStyle = UITableViewCellSelectionStyle.None
+        voteCell.selectionStyle = UITableViewCellSelectionStyle.none
         
-        voteCell.artist.text = artists[indexPath.row]
-        voteCell.song.text = songs[indexPath.row]
+        voteCell.artist.text = artists[(indexPath as NSIndexPath).row]
+        voteCell.song.text = songs[(indexPath as NSIndexPath).row]
         // Attribuut voor het schalen van de labels
         [voteCell.artist.sizeToFit]
         [voteCell.song.sizeToFit]

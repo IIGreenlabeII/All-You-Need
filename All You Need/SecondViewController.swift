@@ -30,29 +30,29 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     // Het weergeven van het aantal tableviewcells
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
     
     // Het inladen van de gegevens voor de tableviewcells
-    func tableView(tabelView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomCell
+    func tableView(_ tabelView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCell
         
         // Hightlight op none
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         
         // Inladen van de tekst
-        cell.time.text = times[indexPath.row]
+        cell.time.text = times[(indexPath as NSIndexPath).row]
         // Inladen van de artiesten
-        cell.artist.text = artists[indexPath.row]
+        cell.artist.text = artists[(indexPath as NSIndexPath).row]
         // Inladen van de stages
-        cell.stage.text = stages[indexPath.row]
+        cell.stage.text = stages[(indexPath as NSIndexPath).row]
         // Attribuut voor het schalen van de labels
         [cell.stage.sizeToFit]
         [cell.time.sizeToFit]
         [cell.artist.sizeToFit]
         // De switch standaard op 'false' bij het openen van de app
-        cell.customSwitch.on = false
+        cell.customSwitch.isOn = false
         
         return cell
     }
