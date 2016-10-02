@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -47,9 +48,6 @@
                                                     <frame key="frameInset" minX="269" minY="82" width="80" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="stemKnop"/>
-                                                    <connections>
-                                                        <action selector="postToServerButton:" destination="I2i-UQ-mHR" eventType="touchUpInside" id="2he-ef-3d8"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -168,24 +166,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Third View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bl0-tn-tEd">
-                                <frame key="frameInset" minX="122" minY="334" width="170" height="42"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Third View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bl0-tn-tEd">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Loaded by ThirdViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHi-Hn-CL7">
-                                <frame key="frameInset" minX="99" minY="384" width="216" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="AHi-Hn-CL7" firstAttribute="centerX" secondItem="Bl0-tn-tEd" secondAttribute="centerX" id="43f-fw-0G9"/>
-                            <constraint firstItem="AHi-Hn-CL7" firstAttribute="top" secondItem="Bl0-tn-tEd" secondAttribute="bottom" constant="8" symbolic="YES" id="Vhr-Hr-M8A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bl0-tn-tEd" secondAttribute="trailing" constant="87" id="6HH-LB-Ln2"/>
+                            <constraint firstItem="cH8-sM-f25" firstAttribute="top" secondItem="Bl0-tn-tEd" secondAttribute="bottom" constant="272" id="f8y-DN-nC3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Artiesten" image="likedartists" selectedImage="likedartists" id="Lq1-rX-Tjv"/>

@@ -9,7 +9,8 @@
 import UIKit
 
 class CustomCell: UITableViewCell {
-
+    
+    // De attributten voor de tableviewcell
     @IBOutlet var customSwitch: UISwitch!
     @IBOutlet var time: UILabel!
     @IBOutlet var artist: UILabel!

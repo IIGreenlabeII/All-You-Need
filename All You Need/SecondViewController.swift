@@ -15,7 +15,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     // Times for the timetable
     var times = ["13:00 - 14:00", "14:00 - 15:00", "15:00 - 16:00", "16:00 - 17:00", "17:00 - 18:00", "18:00 - 19:00", "19:00 - 20:00", "20:00 - 21:00", "21:00 - 22:00", "22:00 - 23:00", "13:00 - 14:00", "14:00 - 15:00", "15:00 - 16:00", "16:00 - 17:00", "17:00 - 18:00", "18:00 - 19:00", "19:00 - 20:00", "20:00 - 21:00", "21:00 - 22:00", "22:00 - 23:00"]
     // Artists for the timetable
-    var artists = ["Jonna Fraser", "Murda", "Sevn Alias", "Boef", "Dj Dyna", "SFB", "SBMG", "Ronnie Flex", "Lil Kleine", "Broederliefde", " Benny R", "Sluwe Vos", "Speed J", "Egbert", "Bass Mooy", "SQL", "TWR72", "Joop Junior", "Kamara", "Carl Cox"]
+    var artists = ["Jonna Fraser", "Murda", "Sevn Alias", "Boef", "Dj Dyna", "SFB", "SBMG", "Ronnie Flex", "Lil Kleine", "Broederliefde", " Benny R", "Sluwe Vos", "Speed J", "Egbert", "Bass Mooy", "SQL", "TWR72", "Joop Junior", "Loco Dice", "Carl Cox"]
     // Stages for the timetable
     var stages = ["Main Stage", "Main Stage", "Main Stage", "Main Stage", "Main Stage", "Main Stage", "Main Stage", "Main Stage", "Main Stage", "Main Stage",   "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene"]
     
@@ -48,9 +48,9 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         // Inladen van de stages
         cell.stage.text = stages[(indexPath as NSIndexPath).row]
         // Attribuut voor het schalen van de labels
-        [cell.stage.sizeToFit]
-        [cell.time.sizeToFit]
-        [cell.artist.sizeToFit]
+        cell.stage.sizeToFit()
+        cell.time.sizeToFit()
+        cell.artist.sizeToFit()
         // De switch standaard op 'false' bij het openen van de app
         cell.customSwitch.isOn = false
         
