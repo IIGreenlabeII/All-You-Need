@@ -12,10 +12,14 @@ import Foundation
 
 class NotificationController: WKUserNotificationInterfaceController {
 
+    @IBOutlet var notificatieLabel: WKInterfaceLabel!
+    @IBOutlet var optredenLabel: WKInterfaceLabel!
+    @IBOutlet var artiestLabel: WKInterfaceLabel!
+    @IBOutlet var festivalLabel: WKInterfaceLabel!
+    @IBOutlet var tijdLabel: WKInterfaceLabel!
     override init() {
         // Initialize variables here.
         super.init()
-        
         // Configure interface objects here.
     }
 
@@ -29,25 +33,33 @@ class NotificationController: WKUserNotificationInterfaceController {
         super.didDeactivate()
     }
 
-    /*
-    override func didReceiveLocalNotification(localNotification: UILocalNotification, withCompletion completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
-        // This method is called when a local notification needs to be presented.
-        // Implement it if you use a dynamic notification interface.
-        // Populate your dynamic notification interface as quickly as possible.
-        //
-        // After populating your dynamic notification interface call the completion block.
-        completionHandler(.Custom)
+    override func didReceiveRemoteNotification(_ remoteNotification: [AnyHashable : Any], withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Void) {
+        
     }
-    */
     
-    /*
-    override func didReceiveRemoteNotification(remoteNotification: [NSObject : AnyObject], withCompletion completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
-        // This method is called when a remote notification needs to be presented.
-        // Implement it if you use a dynamic notification interface.
-        // Populate your dynamic notification interface as quickly as possible.
-        //
-        // After populating your dynamic notification interface call the completion block.
-        completionHandler(.Custom)
+    override func didReceive(_ localNotification: UILocalNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Void) {
+        print("Local")
     }
-    */
+    
+//    func didReceiveLocalNotification(
+//        localNotification: UILocalNotification, withCompletion
+//        completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
+//        // The iOS app received a local notification; set up our interface
+//        print("Local")
+//        self.notificatieLabel.setText("Notificatie")
+//        self.optredenLabel.setText(localNotification.alertTitle?.appending(" Optreden"))
+//        self.artiestLabel.setText("Festival")
+//        // When done, call completionHandler and pass .Custom.
+//        completionHandler(.custom)
+//    }
+//    
+//    func didReceiveRemoteNotification(
+//        remoteNotification: [NSObject : AnyObject], withCompletion
+//        completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
+//        // The iOS app received a local notification; set up our interface
+//        
+//        // When done, call completionHandler and pass .Custom.
+//        completionHandler(.custom)
+//    }
+    
 }

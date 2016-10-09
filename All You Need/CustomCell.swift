@@ -15,16 +15,4 @@ class CustomCell: UITableViewCell {
     @IBOutlet var time: UILabel!
     @IBOutlet var artist: UILabel!
     @IBOutlet var stage: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

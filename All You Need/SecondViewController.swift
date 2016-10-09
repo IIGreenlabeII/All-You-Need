@@ -13,15 +13,14 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     // Times for the timetable
-    var times = ["13:00 - 14:00", "14:00 - 15:00", "15:00 - 16:00", "16:00 - 17:00", "17:00 - 18:00", "18:00 - 19:00", "19:00 - 20:00", "20:00 - 21:00", "21:00 - 22:00", "22:00 - 23:00", "13:00 - 14:00", "14:00 - 15:00", "15:00 - 16:00", "16:00 - 17:00", "17:00 - 18:00", "18:00 - 19:00", "19:00 - 20:00", "20:00 - 21:00", "21:00 - 22:00", "22:00 - 23:00"]
+    var times:[Int:String] = [0:"13:00 - 14:00", 1:"14:00 - 15:00", 2:"15:00 - 16:00", 3:"16:00 - 17:00", 4:"17:00 - 18:00", 5:"18:00 - 19:00", 6:"19:00 - 20:00", 7:"20:00 - 21:00", 8:"21:00 - 22:00", 9:"22:00 - 23:00", 10:"13:00 - 14:00", 11:"14:00 - 15:00", 12:"15:00 - 16:00", 13:"16:00 - 17:00", 14:"17:00 - 18:00", 15:"18:00 - 19:00", 16:"19:00 - 20:00", 17:"20:00 - 21:00", 18:"21:00 - 22:00", 19:"22:00 - 23:00"]
     // Artists for the timetable
-    var artists = ["Jonna Fraser", "Murda", "Sevn Alias", "Boef", "Dj Dyna", "SFB", "SBMG", "Ronnie Flex", "Lil Kleine", "Broederliefde", " Benny R", "Sluwe Vos", "Speed J", "Egbert", "Bass Mooy", "SQL", "TWR72", "Joop Junior", "Loco Dice", "Carl Cox"]
+    var artists:[Int:String] = [0:"Jonna Fraser", 1:"Murda", 2:"Sevn Alias", 3:"Boef", 4:"Dj Dyna", 5:"SFB", 6:"SBMG", 7:"Ronnie Flex", 8:"Lil Kleine", 9:"Broederliefde", 10:"Benny R", 11:"Sluwe Vos", 12:"Speed J", 13:"Egbert", 14:"Bass Mooy", 15:"SQL", 16:"TWR72", 17:"Joop Junior", 18:"Loco Dice", 19:"Carl Cox"]
     // Stages for the timetable
-    var stages = ["Main Stage", "Main Stage", "Main Stage", "Main Stage", "Main Stage", "Main Stage", "Main Stage", "Main Stage", "Main Stage", "Main Stage",   "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene", "TechnoScene"]
+    var stages:[Int:String] = [0:"Main Stage", 1:"Main Stage", 2:"Main Stage", 3:"Main Stage", 4:"Main Stage", 5:"Main Stage", 6:"Main Stage", 7:"Main Stage", 8:"Main Stage", 9:"Main Stage",   10:"TechnoScene", 11:"TechnoScene", 12:"TechnoScene", 13:"TechnoScene", 14:"TechnoScene", 15:"TechnoScene", 16:"TechnoScene", 17:"TechnoScene", 18:"TechnoScene", 19:"TechnoScene"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,9 +37,12 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tabelView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCell
         
+        // Alle rijen een waarde geven
+        cell.customSwitch.tag = indexPath.row
+        cell.customSwitch.addTarget(self, action: #selector(notificationButtonTapped), for: .touchUpInside)
+
         // Hightlight op none
         cell.selectionStyle = UITableViewCellSelectionStyle.none
-        
         // Inladen van de tekst
         cell.time.text = times[(indexPath as NSIndexPath).row]
         // Inladen van de artiesten
@@ -55,6 +57,20 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         cell.customSwitch.isOn = false
         
         return cell
+    }
+    
+    func notificationButtonTapped(sender: AnyObject) {
+        // Switch waarde ophalen
+        let switchTag = sender.tag
+        
+        // Het opbouwen van de notificatie voor de Apple Watch en iPhone
+        let localNotification = UILocalNotification()
+        // Vertraging op de notificatie zetten
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 5) as Date
+        localNotification.alertTitle = artists[switchTag!]
+        localNotification.alertBody = artists[switchTag!]?.appending(" gaat zo optreden! Ga er snel naartoe.")
+        localNotification.soundName = UILocalNotificationDefaultSoundName
+        UIApplication.shared.scheduleLocalNotification(localNotification)
     }
 
 }
