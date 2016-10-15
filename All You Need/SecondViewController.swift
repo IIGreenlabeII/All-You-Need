@@ -18,6 +18,8 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     var artists:[Int:String] = [0:"Jonna Fraser", 1:"Murda", 2:"Sevn Alias", 3:"Boef", 4:"Dj Dyna", 5:"SFB", 6:"SBMG", 7:"Ronnie Flex", 8:"Lil Kleine", 9:"Broederliefde", 10:"Benny R", 11:"Sluwe Vos", 12:"Speed J", 13:"Egbert", 14:"Bass Mooy", 15:"SQL", 16:"TWR72", 17:"Joop Junior", 18:"Loco Dice", 19:"Carl Cox"]
     // Stages for the timetable
     var stages:[Int:String] = [0:"Main Area", 1:"Main Area", 2:"Main Area", 3:"Main Area", 4:"Main Area", 5:"Main Area", 6:"Main ARea", 7:"Main Area", 8:"Main Area", 9:"Main Area",   10:"TechnoScene", 11:"TechnoScene", 12:"TechnoScene", 13:"TechnoScene", 14:"TechnoScene", 15:"TechnoScene", 16:"TechnoScene", 17:"TechnoScene", 18:"TechnoScene", 19:"TechnoScene"]
+    // Maanden
+    var months:[Int:String] = [1:"januari", 2:"februari", 3:"maart", 4:"april", 5:"mei", 6:"juni", 7:"juli", 8:"augustus", 9:"september", 10:"oktober", 11:"november", 12:"december"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,23 +64,20 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     func notificationButtonTapped(sender: AnyObject) {
         // Switch waarde ophalen
         let switchTag = sender.tag
-        //Here I’m creating the calendar instance that we will operate with:
+        //Het aanmaken van een kalender instantie:
         let calendar = NSCalendar.init(calendarIdentifier: NSCalendar.Identifier.gregorian)
-        
-        
-        //Now asking the calendar what month are we in today’s date:
+        //Aan de kalender instatie de dag vragen:
+        let currentDayInt = (calendar?.component(NSCalendar.Unit.day, from: NSDate() as Date))!
+        //Aan de kalender instatie de maand vragen:
         let currentMonthInt = (calendar?.component(NSCalendar.Unit.month, from: NSDate() as Date))!
-        
-        
-        //Now asking the calendar what year are we in today’s date:
+        //Aan de kalender instatie het jaar vragen:
         let currentYearInt = (calendar?.component(NSCalendar.Unit.year, from: NSDate() as Date))!
-        print(currentYearInt)
         // Het opbouwen van de notificatie voor de Apple Watch en iPhone
         let localNotification = UILocalNotification()
         // Vertraging op de notificatie zetten
         localNotification.fireDate = NSDate(timeIntervalSinceNow: 5) as Date
         localNotification.alertTitle = artists[switchTag!]
-        localNotification.alertBody = "begint om " + times[switchTag!]! + ". 8 november 2016. Locatie: " + stages[switchTag!]! + ", Latin Village."
+        localNotification.alertBody = "begint om " + times[switchTag!]! + ". \(currentDayInt) \(months[currentMonthInt]!) \(currentYearInt). Locatie: " + stages[switchTag!]! + ", Latin Village."
         localNotification.soundName = UILocalNotificationDefaultSoundName
         UIApplication.shared.scheduleLocalNotification(localNotification)
     }
