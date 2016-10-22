@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -164,9 +165,39 @@
                     <view key="view" contentMode="scaleToFill" id="XOJ-Vo-2LL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVQ-QK-Zuc">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoQ-cL-HQx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOM-1y-SOh">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hoQ-cL-HQx" secondAttribute="trailing" constant="33" id="4Of-7r-psK"/>
+                            <constraint firstItem="dOM-1y-SOh" firstAttribute="leading" secondItem="GVQ-QK-Zuc" secondAttribute="trailing" constant="32" id="9CS-B0-zwi"/>
+                            <constraint firstItem="hoQ-cL-HQx" firstAttribute="baseline" secondItem="dOM-1y-SOh" secondAttribute="baseline" id="N6Z-f7-ax7"/>
+                            <constraint firstItem="dOM-1y-SOh" firstAttribute="baseline" secondItem="GVQ-QK-Zuc" secondAttribute="baseline" id="bgU-lw-5X1"/>
+                            <constraint firstItem="GVQ-QK-Zuc" firstAttribute="leading" secondItem="XOJ-Vo-2LL" secondAttribute="leadingMargin" id="i1B-iG-p92"/>
+                            <constraint firstItem="GVQ-QK-Zuc" firstAttribute="top" secondItem="0gV-Bt-f9d" secondAttribute="bottom" constant="40" id="tRT-wi-F4L"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Artiesten" image="likedartists" selectedImage="likedartists" id="Lq1-rX-Tjv"/>
+                    <connections>
+                        <outlet property="artistLabel" destination="dOM-1y-SOh" id="Qz5-f3-pLu"/>
+                        <outlet property="stageLabel" destination="hoQ-cL-HQx" id="PNQ-bK-wnP"/>
+                        <outlet property="timeLabel" destination="GVQ-QK-Zuc" id="aqV-Tu-jLM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tfm-lx-B6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

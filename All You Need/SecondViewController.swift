@@ -61,6 +61,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+    // Functie die uitgevoerd wordt als de switch getriggerd is
     func notificationButtonTapped(sender: AnyObject) {
         // Switch waarde ophalen
         let switchTag = sender.tag
@@ -80,6 +81,15 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         localNotification.alertBody = "begint om " + times[switchTag!]! + ". \(currentDayInt) \(months[currentMonthInt]!) \(currentYearInt). Locatie: " + stages[switchTag!]! + ", Latin Village."
         localNotification.soundName = UILocalNotificationDefaultSoundName
         UIApplication.shared.scheduleLocalNotification(localNotification)
+        
+        let userDefaults = UserDefaults.standard;
+        // Opslaan van de waarden
+        userDefaults.set(times[switchTag!], forKey:"time");
+        userDefaults.set(artists[switchTag!], forKey:"artistName");
+        userDefaults.set(stages[switchTag!], forKey:"stageName");
+        // Sychroniseren van de waarden
+        userDefaults.synchronize();
+        
     }
 
 }
